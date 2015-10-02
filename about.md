@@ -35,12 +35,6 @@ header-img: "img/Scenery1.jpg"
 
 
 
-<center>
-    <p>align="center"></p>
-</center>
-
-
-
 
 
 

@@ -1,9 +1,9 @@
 # Site settings
-title: wood-wind 
+title: 午 
 header-img: "img/sence2.jpg"
 tagline: "cn"  
-description: "未经思考的人生是不值得过的"  
-baseurl: ""
+description: ""  
+baseurl: "aaa"
 url: "http://wood-wind.github.io"  
 
 # About/contact
