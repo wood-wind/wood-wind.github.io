@@ -24,19 +24,19 @@ header-img: "img/Scenery3.jpg"
 
 ###关注：
 
-- [刘未鹏 | MIND HACKS](http://mindhacks.cn/)
+- [刘未鹏 MIND HACKS] (http://mindhacks.cn/)
 - [program-think](http://program-think.blogspot.com/)
 - 写作
 - Java
 - 心理学
-- 思维改变生活(刘未鹏)(http://www.douban.com/doulist/46003/)
+- 思维改变生活(http://www.douban.com/doulist/46003/)
 
 
 
 
 
 <center>
-    <p><img src="http://i173.photobucket.com/albums/w63/cnfeat/2015-08-29-2_zpsqj7po8eo.png" align="center"></p>
+    <p>align="center"></p>
 </center>
 
 
