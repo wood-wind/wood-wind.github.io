@@ -1,6 +1,6 @@
 # Site settings
 title: wood-wind 
-header-img: "img/facebook.jpg"
+header-img: "img/mm1341.jpg"
 tagline: "cn"  
 description: ""  
 baseurl: ""
@@ -34,7 +34,7 @@ exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 relative_permalinks: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone: Asia/Shanghai
+timezone: Asia/Beijing
 
 # Defaults for posts
 defaults:
@@ -44,16 +44,16 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "CnFeat"
-      header-img: "img/facebook.jpg" # We don't want posts without a header image, that whould mean white on white
+      author: "wood-wind"
+      header-img: "img/Scenery1.jpg" # We don't want posts without a header image, that whould mean white on white
 
 # Comments 
 comments :
   provider : duoshuo
   duoshuo :
-    short_name : cnfeat
+    short_name : wood-wind
   disqus :
-      short_name : cnfeat
+      short_name : wood-wind
 
 # Analytics and webmaster tools stuff goes here
 google_analytics: 
