@@ -1,5 +1,5 @@
 # Site settings
-title: wood-wind
+title: wood-wind 
 header-img: "img/facebook.jpg"
 tagline: "cn"  
 description: ""  
@@ -8,7 +8,7 @@ url: "http://wood-wind.github.io"
 
 # About/contact
 owner: 
-  name: " wood-wind"
+  name: "wood-wind"
   email: littlefive.think@gmail.com
   bio: "未经思考的人生是不值得过的"
 
