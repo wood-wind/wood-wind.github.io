@@ -24,12 +24,12 @@ header-img: "img/Scenery3.jpg"
 
 ###关注：
 
-- [刘未鹏 MIND HACKS] (http://mindhacks.cn/)
+- [刘未鹏 MIND HACKS](http://mindhacks.cn/)
 - [program-think](http://program-think.blogspot.com/)
 - 写作
 - Java
 - 心理学
-- 思维改变生活(http://www.douban.com/doulist/46003/)
+- [思维改变生活](http://www.douban.com/doulist/46003/)
 
 
 
