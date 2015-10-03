@@ -7,7 +7,7 @@ header-img: "img/sence4.jpg"
 
 
 <center>
-    <p><img src="http://img3.douban.com/view/photo/photo/public/p2271675670.jpg" align="center"></p>
+   <p><img src="http://img3.douban.com/view/photo/photo/public/p2271675670.jpg" align="center"></p>
 </center>
 
 我是午，每天千字践行者，正在践行中......
@@ -30,8 +30,6 @@ header-img: "img/sence4.jpg"
 - Java
 - 心理学
 - [思维改变生活](http://www.douban.com/doulist/46003/)
-
-
 
 
 
