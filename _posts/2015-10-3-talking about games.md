@@ -12,7 +12,7 @@ description: 每个人都有不一样的童年，你的童年游戏都是什么�
 下午在知乎随意看看的时候点到了[单机游戏](http://www.zhihu.com/topic/19553732/top-answers)
 的话题，看着里面的答主们回忆了好多儿时玩过的游戏，以及对一些经典游戏故事的评析，以至于我也先回忆了下儿时玩过的印象非常深刻的游戏，有的还搜出来再次体验了一吧。
 
-印象比较深的红白机游戏有三个，《三国志2霸王的大陆》《重装机兵》《吞食天地2》，第一个是历史战略模拟类游戏，后面两个都是RPG游戏。
+印象比较深的红白机游戏有三个，[《三国志2霸王的大陆》](http://baike.baidu.com/link?url=YwBZe5OIuVQPFa2LdDhN2iarGUezt0iPB5jIA-cZiYECviaAATF0RWLLgbO1l2HRH9HNLu31FmzOBxoIiIkuiK)[《重装机兵》](http://baike.baidu.com/subview/42188/6064120.htm)[《吞食天地2》](https://zh.wikipedia.org/wiki/%E5%90%9E%E9%A3%9F%E5%A4%A9%E5%9C%B0_(FC))，第一个是历史战略模拟类游戏，后面两个都是RPG游戏。
 
 霸王的大陆
 
