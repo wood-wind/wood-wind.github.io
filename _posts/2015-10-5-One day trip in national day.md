@@ -48,16 +48,25 @@ description: 国庆7天假不可能都呆在家里，总会出去走走，只是
 
 后来步行去了北面不远的野长城。当时因为这个像是长城入口的河防口害得我们走错了道。
 <center>
-   <p><img src="http://img4.douban.com/view/photo/photo/XSHnfaggxE8QPyGBABbgYQ/x2272443228.jpg" align="center"></p>
- <p><img src="http://img3.douban.com/view/photo/photo/hTKzzHws66wxs1EiCR3Org/x2272443460.jpg" align="center"></p>
+   <p><img src="http://img3.douban.com/view/photo/photo/4FYebWsuZERTTmuZmDpYEg/x2272443014.jpg" align="center"></p>
+ 
 </center>
-毕竟是野长城，能够明显感觉到游客很少，我猜想此时的慕田峪长城应该已是人满为患了。
+毕竟是野长城，能够明显感觉到游客很少，我猜想此时的[慕田峪长城](http://baike.baidu.com/view/105143.htm)应该已是人满为患了。
+
+<center>
+   <p><img src="http://img4.douban.com/view/photo/photo/XSHnfaggxE8QPyGBABbgYQ/x2272443228.jpg" align="center"></p>
+</center>
 
 最后还是没有登上长城，后来才知道这里的野长城没有大路可以上去，只有小路能上
 
 我们有看到小路，旁边竖了牌子，大意是保护长城，不准随意攀登。
 
 看到小路也比较陡，出于安全考虑，并没有从这里上，寻找其他途径。算了，后面的就不提了罢......
+
+<center>
+   <p><img src="http://img3.douban.com/view/photo/photo/hTKzzHws66wxs1EiCR3Org/x2272443460.jpg" align="center"></p>
+</center>
+最后还是来一张从隔壁山上远眺长城的图吧。
 
 晚上回来又折腾了一把。。。
 
