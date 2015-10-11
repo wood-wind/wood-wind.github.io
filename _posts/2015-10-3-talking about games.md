@@ -25,25 +25,15 @@ description: 每个人都有不一样的童年，你的童年游戏都是什么�
 11年的某天突然想起了这个游戏，就去网上下下来用电脑玩，那时突发奇想如果随着时间的前进武将都系统死亡会是游戏会是什么结果（游戏每个武将都有生命期，到了那个时间点武将自动死亡）
 
 于是就仔细玩了一遍，基本没有战争，注重在时间流逝。
-<center>
-   <p><img src="http://img3.douban.com/view/photo/photo/QQpeTT3CFggc736BsdmCvA/x2271900775.jpg" align="center"></p>
-</center>
+![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-03-1.jpg)
 （当时的存盘时间点都还记录着......）
-<center>
-   <p><img src="http://img3.douban.com/view/photo/photo/GrYpjHxPaUSjPUlmfzkGZQ/x2271900783.jpg" align="center"></p>
-</center>
-<center>
-   <p><img src="http://img4.douban.com/view/photo/photo/Z8oxg7to91Qda6kvBUiL9g/x2271900789.jpg" align="center"></p>
-</center>
+![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-03-4.jpg)
+![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-03-5.jpg)
 我把那些比较强的武将都招到了我的麾下......哈哈
 
-<center>
-   <p><img src="http://img3.douban.com/view/photo/photo/c-4eEt-lY7mdPMB5ogXTAg/x2271900780.jpg" align="center"></p>
-</center>
+![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-03-3.jpg)
 当刘备白帝托孤时
-<center>
-   <p><img src="http://img4.douban.com/view/photo/photo/T1LRG2fzOC0hoW6iVUd96g/x2271900779.jpg" align="center"></p>
-</center>
+![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-03-2.jpg)
 渐渐的，从230年开始下方的消息框里不时的就会提示某某武将已经亡故，我的四个城池三十多个“精英”武将也越来越少
 
 敌方战略中时君主的名字也不是原来熟悉的了，地图上也开始偶尔冒出来空白的城池，突然一种莫名的伤感涌上心头。
