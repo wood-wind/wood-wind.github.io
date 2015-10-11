@@ -36,6 +36,7 @@ description: 最近在学这个，算是总结吧。
 
 ##网络设置　
 - 修改IP地址
+
 	vi /etc/sysconfig/network-scripts/ifcfg-eth0
 	DEVICE=eth0				设置网络接口名称
 	ONBOOT=yes					设置网络接口在系统启动时激活。
@@ -49,26 +50,35 @@ description: 最近在学这个，算是总结吧。
 也可在下面设置
 
 - 修改网关
+
 	vi /etc/sysconfig/network
 	NETWORKING=yes
 	HOSTNAME=wu
 	GATEWAY=192.168.199.1
 
 - 修改DNS
+
 	vi /etc/resolv.conf
 	DNS1=8.8.8.8
 	DNS2=8.8.4.4
 
 - 重新启动网络配置
+
 	service network restart
+	
 - 最后Ping www.baidu.com 看是否能Ping通
 	
 ##安装JDK
 - 法一:直接用yum安装lrzsz（推荐）
+
 	yum install lrzsz -y
+	
 	安装完成之后
+	
 >使用rz(上传)
+
 	同样
+	
 	sz filename(下载)
 	
 - 法二:通过FlashFXP工具(或者其他工具)
@@ -92,7 +102,9 @@ description: 最近在学这个，算是总结吧。
 	PATH=$PATH:$JAVA_HOME/bin 
 	
 - 检测
+
 输入java -version查看是否配置正确
+
 也可以写个"Hello World"进行测试
 
 >新建一个Test.java文件，在其中输入以下代码并保存： 
@@ -106,16 +118,21 @@ description: 最近在学这个，算是总结吧。
 		} 
 
 	} 
+	
 编译：在终端执行命令 javac Test.java 
+
 运行：在终端执行命令 java Test wu 
+
 当下方出现“Hello Worle!wu”字样则jdk运行正常。
 	
 ##Tomcat的安装
 方法与JDK类似
+
 使用rz上传后把文件移动到/etc/local/目录下再执行tar -zxvf tomcat(版本号)即完成了tomcat的部署
 
 ##启动tomcat服务
 将目录切换到opt/tomcat/bin执行sh catalina.sh提示服务开启
+
 关闭系统防火墙service iptables stop/start
 
 ##在客户端访问tomcat首页
@@ -123,6 +140,7 @@ http://localhost：8080/如果正常显示tomcat首页表明配置ok。
 
 ##部署一个web项目
 将文件为test.war的包上传到opt/tomcat/webapps目录下，然后重启tomcat，如下命令：./catalina.sh run，部署ssh2.war并启动tomcat
+
 在客户端输入http://localhost:8080/ssh2，显示登录页面表明项目部署成功。
 
 明天补图......
