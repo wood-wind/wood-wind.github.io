@@ -55,6 +55,6 @@ description: 来北京这么久了，写写关于天气的吧，这边夏天确�
 也许真的没有必要那么担心的。
 
 <center>
-   <p><img src="http://img6.douban.com/view/photo/photo/oQliWp9PJBJx97l6W9jPow/x2272994951.jpg" align="center"></p>
+   ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-10-1.jpg)
 </center>
 这是我刚来北京时拍的蓝天

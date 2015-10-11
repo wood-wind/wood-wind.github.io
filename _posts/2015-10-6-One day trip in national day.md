@@ -18,8 +18,8 @@ description: 国庆7天假不可能都呆在家里，总会出去走走，只是
 
 我所去的雁栖湖是意料之中的人多，所以并无兴致。丁点大的地方，挤了这么多人，还修了些游乐设施增添“气氛”.
 <center>
-   <p><img src="http://img4.douban.com/view/photo/photo/D6KWtiuzdo2TFJic3AylqA/x2272411228.jpg" align="center"></p>
-   <p><img src="http://img4.douban.com/view/photo/photo/XxHJqASEVqtMqpdpAX27Hw/x2272411066.jpg" align="center"></p>
+   ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-06-3.jpg)
+   ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-06-2.jpg)
 </center>
 
 国内有个毛病，凡是小有名气的，环境还可以的，大都会圈起来，起个名字，弄点基础设施，然后宣传一把就开始收门票。
@@ -32,7 +32,7 @@ description: 国庆7天假不可能都呆在家里，总会出去走走，只是
 
 同学说学校13年才开始启用，有些都还在修，绿化确实还欠缺很多。
 <center>
-   <p><img src="http://img3.douban.com/view/photo/photo/ObfSwZUn54omsvWKUqU00g/x2272410871.jpg" align="center"></p>
+   ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-06-1.jpg)
 </center>
 （截图自Google地图）15年的图算是比较新的了。
 
@@ -48,13 +48,12 @@ description: 国庆7天假不可能都呆在家里，总会出去走走，只是
 
 后来步行去了北面不远的野长城。当时因为这个像是长城入口的河防口害得我们走错了道。
 <center>
-   <p><img src="http://img3.douban.com/view/photo/photo/4FYebWsuZERTTmuZmDpYEg/x2272443014.jpg" align="center"></p>
- 
+ ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-06-4.jpg)
 </center>
 毕竟是野长城，能够明显感觉到游客很少，我猜想此时的[慕田峪长城](http://baike.baidu.com/view/105143.htm)应该已是人满为患了。
 
 <center>
-   <p><img src="http://img4.douban.com/view/photo/photo/XSHnfaggxE8QPyGBABbgYQ/x2272443228.jpg" align="center"></p>
+   ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-06-5.jpg)
 </center>
 
 最后还是没有登上长城，后来才知道这里的野长城没有大路可以上去，只有小路能上
@@ -64,7 +63,7 @@ description: 国庆7天假不可能都呆在家里，总会出去走走，只是
 看到小路也比较陡，出于安全考虑，并没有从这里上，寻找其他途径。算了，后面的就不提了罢......
 
 <center>
-   <p><img src="http://img3.douban.com/view/photo/photo/hTKzzHws66wxs1EiCR3Org/x2272443460.jpg" align="center"></p>
+   ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-06-6.jpg)
 </center>
 最后还是来一张从隔壁山上远眺长城的图吧。
 
