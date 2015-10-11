@@ -36,94 +36,79 @@ description: 最近在学这个，算是总结吧。
 
 ##网络设置　
 - 修改IP地址
-
->vi /etc/sysconfig/network-scripts/ifcfg-eth0
->
->DEVICE=eth0				设置网络接口名称
->
->ONBOOT=yes					设置网络接口在系统启动时激活。
->
->BOOTPROTO=static			配置为静态地址
->
->IPADDR=192.168.199.99		IP地址
->
->NETMASK=255.255.255.0		子网掩码
->
->GATEWAY=192.168.199.1		网关
->
->DNS1=8.8.8.8
->
->DNS2=8.8.4.4
+	vi /etc/sysconfig/network-scripts/ifcfg-eth0
+	DEVICE=eth0				设置网络接口名称
+	ONBOOT=yes					设置网络接口在系统启动时激活。
+	BOOTPROTO=static			配置为静态地址
+	IPADDR=192.168.199.99		IP地址
+	NETMASK=255.255.255.0		子网掩码
+	GATEWAY=192.168.199.1		网关
+	DNS1=8.8.8.8
+	DNS2=8.8.4.4
 
 也可在下面设置
 
 - 修改网关
->vi /etc/sysconfig/network
->
->NETWORKING=yes
->
->HOSTNAME=wu
->
->GATEWAY=192.168.199.1
+	vi /etc/sysconfig/network
+	NETWORKING=yes
+	HOSTNAME=wu
+	GATEWAY=192.168.199.1
 
 - 修改DNS
-
->vi /etc/resolv.conf
->
->DNS1=8.8.8.8
->
->DNS2=8.8.4.4
+	vi /etc/resolv.conf
+	DNS1=8.8.8.8
+	DNS2=8.8.4.4
 
 - 重新启动网络配置
->service network restart
+	service network restart
 - 最后Ping www.baidu.com 看是否能Ping通
 	
 ##安装JDK
 - 法一:直接用yum安装lrzsz（推荐）
->yum install lrzsz -y
+	yum install lrzsz -y
 	安装完成之后
 >使用rz(上传)
 	同样
->sz filename(下载)
+	sz filename(下载)
 	
 - 法二:通过FlashFXP工具(或者其他工具)
 	将下载到电脑上的JDK用工具传到redhat某文件夹下
 	
 ##JDK环境配置
->mv jdk-8u60-linux-i586.tar.gz /usr/local/   (将JDK拷贝到目标路径下)
+	mv jdk-8u60-linux-i586.tar.gz /usr/local/   (将JDK拷贝到目标路径下)
 
->tar -zxvf jdk-8u60-linux-i586.tar.gz	(解压文件)
+	tar -zxvf jdk-8u60-linux-i586.tar.gz	(解压文件)
 
 - 设置环境变量
 
->vi /etc/profile
+	vi /etc/profile
 
 在文件开头或末尾添加
 
->JAVA_HOME=/usr/local/java/jdk(安装的版本号/文件夹名) 
->
->CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar 
->
->PATH=$PATH:$JAVA_HOME/bin 
+	JAVA_HOME=/usr/local/java/jdk(安装的版本号/文件夹名) 
+
+	CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar 
+
+	PATH=$PATH:$JAVA_HOME/bin 
 	
 - 检测
 输入java -version查看是否配置正确
 也可以写个"Hello World"进行测试
 
 >新建一个Test.java文件，在其中输入以下代码并保存： 
->
->public class test { 
->
->	public static void main(String args[]) { 
->
->		System.out.println("Hello Worle!"+args[0]); 
->
->	} 
->
->} 
-	编译：在终端执行命令 javac Test.java 
-	运行：在终端执行命令 java Test wu 
-	当下方出现“Hello Worle!wu”字样则jdk运行正常。
+
+	public class test { 
+
+		public static void main(String args[]) { 
+
+			System.out.println("Hello Worle!"+args[0]); 
+
+		} 
+
+	} 
+编译：在终端执行命令 javac Test.java 
+运行：在终端执行命令 java Test wu 
+当下方出现“Hello Worle!wu”字样则jdk运行正常。
 	
 ##Tomcat的安装
 方法与JDK类似
