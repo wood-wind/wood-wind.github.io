@@ -18,7 +18,7 @@ description: 最近在学这个，算是总结吧。
 
 - [jdk-8u60-linux-i586.tar.gz[点此下载](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-- tomcat7.0[点此下载](http://tomcat.apache.org/download-70.cgi)
+- tomcat7.0.64[点此下载](http://tomcat.apache.org/download-70.cgi)
 
 - Mysql
 
@@ -59,7 +59,7 @@ description: 最近在学这个，算是总结吧。
 
 - 修改网关
 
-	vi /etc/sysconfig/network
+	>vi /etc/sysconfig/network
 	
 	NETWORKING=yes
 	
@@ -69,7 +69,7 @@ description: 最近在学这个，算是总结吧。
 
 - 修改DNS
 
-	vi /etc/resolv.conf
+	>vi /etc/resolv.conf
 	
 	DNS1=8.8.8.8
 	
@@ -96,64 +96,81 @@ description: 最近在学这个，算是总结吧。
 	
 - 法二:通过FlashFXP工具(或者其他工具)
 将下载到电脑上的JDK用工具传到redhat某文件夹下
+![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-12-1.jpg)
+
 	
 ##JDK环境配置
->mv jdk-8u60-linux-i586.tar.gz /usr/local/   (将JDK拷贝到目标路径下)
->
+-解压 jdk.tar.gz 包
+
 >tar -zxvf jdk-8u60-linux-i586.tar.gz	(解压文件)
+>
+>mv jdk-8u60-linux-i586.tar.gz /usr/local/   (将JDK拷贝到目标路径下)
 
 - 设置环境变量
-
+	#编辑环境变量配置文件 
 	vi /etc/profile
 
 在文件开头或末尾添加
 
 	JAVA_HOME=/usr/local/java/jdk(安装的版本号/文件夹名) 
-
 	CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar 
-
 	PATH=$PATH:$JAVA_HOME/bin 
 	
+保存退出，并执行命令： 
+	
+	#执行 
+	source /etc/profile 
+
 - 检测
 
 输入java -version查看是否配置正确
 
 也可以写个"Hello World"进行测试
 
->新建一个Test.java文件，在其中输入以下代码并保存： 
-
+	#新建一个Test.java文件，在其中输入以下代码并保存： 
 	public class test { 
-
 		public static void main(String args[]) { 
-
 			System.out.println("Hello Worle!"+args[0]); 
-
 		} 
-
 	} 
 	
-编译：在终端执行命令 javac Test.java 
-
-运行：在终端执行命令 java Test wu 
-
-当下方出现“Hello Worle!wu”字样则jdk运行正常。
+编译：在终端执行命令 javac Test.java	
+运行：在终端执行命令 java Test wu 	
+当下方出现“Hello Worle!wu”字样则jdk运行正常。	
 	
 ##Tomcat的安装
 方法与JDK类似
 
-使用rz上传后把文件移动到/etc/local/目录下再执行tar -zxvf tomcat(版本号)即完成了tomcat的部署
+上传方法同 jdk 一样,rz 或者 wget 命令
+
+	#解压tomcat到当前目录 
+	tar –xvzf apache-tomcat-7.0.64.tar.gz 
+
+
+使用rz上传后把文件移动到/etc/local/目录下(或直接上传至该目录)
+
+	#再执行
+	tar -zxvf tomcat7.0.64
+	
+即完成了tomcat的部署
 
 ##启动tomcat服务
-将目录切换到opt/tomcat/bin执行sh catalina.sh提示服务开启
-
-关闭系统防火墙service iptables stop/start
+将目录切换到opt/tomcat/bin执行 
+	./startup.sh
+提示服务开启
 
 ##在客户端访问tomcat首页
-http://localhost：8080/如果正常显示tomcat首页表明配置ok。
+http://localhost:8080/如果正常显示tomcat首页表明配置ok。
+![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-12-2.jpg)
+
+##关闭防火墙
+如果部署完成但是依然不能正常显示tomcat首页可能是未关防火墙
+
+关闭系统防火墙
+	service iptables stop/start
 
 ##部署一个web项目
 将文件为test.war的包上传到opt/tomcat/webapps目录下，然后重启tomcat，如下命令：./catalina.sh run，部署ssh2.war并启动tomcat
 
 在客户端输入http://localhost:8080/ssh2，显示登录页面表明项目部署成功。
 
-明天补图......
