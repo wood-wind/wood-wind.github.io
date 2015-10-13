@@ -7,7 +7,7 @@ tags: [技术]
 description: 最近在学这个，算是总结吧。
 ---
 
-2015年10月10日23:23:40
+2015年10月11日22:57:16
 
 最近在学linux配置Java环境，将项目部署到linux下，并能够运行。
 
@@ -79,7 +79,7 @@ description: 最近在学这个，算是总结吧。
 
 同样
 	
-   sz filename(下载)
+	sz filename(下载)
 	
 - 法二:通过FlashFXP工具(或者其他工具)
 将下载到电脑上的JDK用工具传到redhat某文件夹下
