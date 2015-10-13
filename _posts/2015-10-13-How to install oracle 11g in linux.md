@@ -28,7 +28,8 @@ description: 最近也在学这个，算是总结吧。
 
 ##添加服务器名称(可选)
 	eg: 192.168.199.99 	  zjw.localdomain   		  zjw
-	<IP-Address>	  <machine-name.domain-name> <machine-name>  
+	<IP-Address>	  <machine-name.domain-name> <machine-name> 
+	
 ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-13-3.jpg)
 
 ##内核参数调整（不低于以下值）
@@ -50,7 +51,8 @@ description: 最近也在学这个，算是总结吧。
 
 	vi /etc/security/limits.conf
 	
-最后一行添加  
+最后一行添加
+
 	oracle        soft    nproc    8192
 	oracle        hard    nproc    16384
 	oracle        soft    nofile   32768

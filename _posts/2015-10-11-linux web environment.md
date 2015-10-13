@@ -98,8 +98,7 @@ description: 最近在学这个，算是总结吧。
 	#编辑环境变量配置文件 
 	vi /etc/profile
 
-在文件开头或末尾添加
-
+在文件开头或末尾添加  
 	JAVA_HOME=/usr/local/java/jdk(安装的版本号/文件夹名) 
 	CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar 
 	PATH=$PATH:$JAVA_HOME/bin 
@@ -109,7 +108,7 @@ description: 最近在学这个，算是总结吧。
 	#执行 
 	source /etc/profile 
 
-- 检测  
+####检测  
 输入java -version查看是否配置正确,
 也可以写个"Hello World"进行测试
 
