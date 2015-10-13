@@ -37,41 +37,41 @@ description: 最近在学这个，算是总结吧。
 ##网络设置　
 - 修改IP地址
 
-	vi /etc/sysconfig/network-scripts/ifcfg-eth0
-	DEVICE=eth0				设置网络接口名称
-	ONBOOT=yes					设置网络接口在系统启动时激活。
-	BOOTPROTO=static			配置为静态地址
-	IPADDR=192.168.199.99		IP地址
-	NETMASK=255.255.255.0		子网掩码
-	GATEWAY=192.168.199.1		网关
-	DNS1=8.8.8.8
-	DNS2=8.8.4.4
+	+ vi /etc/sysconfig/network-scripts/ifcfg-eth0
+	+ DEVICE=eth0				设置网络接口名称
+	+ ONBOOT=yes					设置网络接口在系统启动时激活。
+	+ BOOTPROTO=static			配置为静态地址
+	+ IPADDR=192.168.199.99		IP地址
+	+ NETMASK=255.255.255.0		子网掩码
+	+ GATEWAY=192.168.199.1		网关
+	+ DNS1=8.8.8.8
+	+ DNS2=8.8.4.4
 
 也可在下面设置
 
 - 修改网关
 
-	vi /etc/sysconfig/network
-	NETWORKING=yes
-	HOSTNAME=wu
-	GATEWAY=192.168.199.1
+	+ vi /etc/sysconfig/network
+	+ NETWORKING=yes
+	+ HOSTNAME=wu
+	+ GATEWAY=192.168.199.1
 
 - 修改DNS
 
-	vi /etc/resolv.conf
-	DNS1=8.8.8.8
-	DNS2=8.8.4.4
+	+ vi /etc/resolv.conf
+	+ DNS1=8.8.8.8
+	+ DNS2=8.8.4.4
 
 - 重新启动网络配置
 
-	service network restart
+	>service network restart
 	
 - 最后Ping www.baidu.com 看是否能Ping通
 	
 ##安装JDK
 - 法一:直接用yum安装lrzsz（推荐）
 
-   yum install lrzsz -y
+   >yum install lrzsz -y
 	
 安装完成之后
 	
@@ -79,9 +79,10 @@ description: 最近在学这个，算是总结吧。
 
 同样
 	
-	sz filename(下载)
+	>sz filename(下载)
 	
 - 法二:通过FlashFXP工具(或者其他工具)
+
 将下载到电脑上的JDK用工具传到redhat某文件夹下
 ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-12-1.jpg)
 
@@ -89,13 +90,15 @@ description: 最近在学这个，算是总结吧。
 ##JDK环境配置
 - 解压 jdk.tar.gz 包
 
-	tar -zxvf jdk-8u60-linux-i586.tar.gz	(解压文件)
-	mv jdk-8u60-linux-i586.tar.gz /usr/local/   (将JDK拷贝到目标路径下)
+	>tar -zxvf jdk-8u60-linux-i586.tar.gz	(解压文件)
+	>
+	>mv jdk-8u60-linux-i586.tar.gz /usr/local/   (将JDK拷贝到目标路径下)
 
 - 设置环境变量
 
-	#编辑环境变量配置文件 
-	vi /etc/profile
+	>#编辑环境变量配置文件 
+	>
+	>vi /etc/profile
 
 在文件开头或末尾添加
 
