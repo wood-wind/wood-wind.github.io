@@ -12,8 +12,8 @@ description: 最近也在学这个，算是总结吧。
 ##准备Oracle 12c的安装条件
 - 去官方网站下载[http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html) 安装包，有2个包，大约2GB左右  
 包名称:  
-	inux_11gR2_database_1of2.zip
-	inux_11gR2_database_2of2.zip
+		inux_11gR2_database_1of2.zip  
+		inux_11gR2_database_2of2.zip
 
 - 将安装文件上传  
 使用rz命令将两个压缩包上传到redhat中
@@ -28,8 +28,7 @@ description: 最近也在学这个，算是总结吧。
 
 ##添加服务器名称(可选)
 	eg: 192.168.199.99 	  zjw.localdomain   		  zjw
-	<IP-Address>	  <machine-name.domain-name> <machine-name>
-	
+	<IP-Address>	  <machine-name.domain-name> <machine-name>  
 ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-13-3.jpg)
 
 ##内核参数调整（不低于以下值）
@@ -44,16 +43,14 @@ description: 最近也在学这个，算是总结吧。
 	net.core.wmem_default = 262144
 	net.core.wmem_max = 1048576
 
-	加载参数
-	
+	#加载参数
 	sysctl -p
 	
 ##调整会话限制
 
 	vi /etc/security/limits.conf
 	
-最后一行添加
- 
+最后一行添加  
 	oracle        soft    nproc    8192
 	oracle        hard    nproc    16384
 	oracle        soft    nofile   32768
@@ -83,8 +80,7 @@ description: 最近也在学这个，算是总结吧。
 	
 ####设置SELinux为disabled
 
-	vi /etc/selinux/config
-	
+	vi /etc/selinux/config  
 ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-13-4.jpg)
 
 ##安装目录准备

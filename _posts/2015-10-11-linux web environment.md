@@ -35,7 +35,7 @@ description: 最近在学这个，算是总结吧。
 完成之后如果直接点确定发现还是不行的，得再点击小光盘图标然后选**连接**才行
 
 ##网络设置
-　
+
 ####修改IP地址
 
 	vi /etc/sysconfig/network-scripts/ifcfg-eth0
@@ -75,12 +75,9 @@ description: 最近在学这个，算是总结吧。
 
 	yum install lrzsz -y
 	
-安装完成之后
-	
-使用rz(上传)
-
-同样
-	
+安装完成之后  
+使用rz(上传)  
+同样  
 	sz filename(下载)
 	
 ####法二:通过FlashFXP工具(或者其他工具)
@@ -112,8 +109,7 @@ description: 最近在学这个，算是总结吧。
 	#执行 
 	source /etc/profile 
 
-- 检测
-
+- 检测  
 输入java -version查看是否配置正确,
 也可以写个"Hello World"进行测试
 
@@ -124,25 +120,19 @@ description: 最近在学这个，算是总结吧。
 		} 
 	} 
 	
-编译：在终端执行命令 javac Test.java
-	
-运行：在终端执行命令 java Test wu 	
-
+编译：在终端执行命令 javac Test.java  
+运行：在终端执行命令 java Test wu  
 当下方出现“Hello Worle!wu”字样则jdk运行正常。	
 	
 ##Tomcat的安装
-上传方法同 jdk 一样,rz 或者 wget 命令把文件移动到/etc/local/目录下(或直接上传至该目录)
-
+上传方法同 jdk 一样,rz 或者 wget 命令把文件移动到/etc/local/目录下(或直接上传至该目录)  
 	#解压tomcat到当前目录 
-	tar –xvzf apache-tomcat-7.0.64.tar.gz 
-	
+	tar –xvzf apache-tomcat-7.0.64.tar.gz  
 即完成了tomcat的部署
 
 ##启动tomcat服务
-将目录切换到opt/tomcat/bin执行 
-
-	./startup.sh
-	
+将目录切换到opt/tomcat/bin执行  
+	./startup.sh  
 提示服务开启
 
 ##在客户端访问tomcat首页
@@ -150,13 +140,11 @@ description: 最近在学这个，算是总结吧。
 ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-12-2.jpg)
 
 ##关闭防火墙
-如果部署完成但是依然不能正常显示tomcat首页可能是未关防火墙
-
+如果部署完成但是依然不能正常显示tomcat首页可能是未关防火墙  
 	#关闭系统防火墙
 	service iptables stop/start
 
 ##部署一个web项目
-将文件为test.war的包上传到opt/tomcat/webapps目录下，然后重启tomcat
-
+将文件为test.war的包上传到opt/tomcat/webapps目录下，然后重启tomcat  
 在客户端输入http://localhost:8080/ssh2，显示登录页面表明项目部署成功。
 
