@@ -10,22 +10,18 @@ description: 最近也在学这个，算是总结吧。
 2015年10月13日22:46:24
 
 ##准备Oracle 12c的安装条件
-- 去官方网站下载[http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html) 安装包，有2个包，大约2GB左右
-
-包名称:
-
+- 去官方网站下载[http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html) 安装包，有2个包，大约2GB左右  
+包名称:  
 	inux_11gR2_database_1of2.zip
 	inux_11gR2_database_2of2.zip
 
-- 将安装文件上传
-
+- 将安装文件上传  
 使用rz命令将两个压缩包上传到redhat中
 ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-13-1.jpg)
 
-- 将压缩包解压
-
-	unzip inux_11gR2_database_1of2.zip
-	unzip inux_11gR2_database_2of2.zip
+- 将压缩包解压  
+		unzip inux_11gR2_database_1of2.zip  
+		unzip inux_11gR2_database_2of2.zip
 
 - 得到database文件夹
 ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-13-2.jpg)
