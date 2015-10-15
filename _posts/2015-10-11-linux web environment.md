@@ -73,11 +73,11 @@ description: 最近在学这个，算是总结吧。
 
 ####法一:直接用yum安装lrzsz（推荐）
 
-	yum install lrzsz -y
-	
+	yum install lrzsz -y  
 安装完成之后  
 使用rz(上传)  
 同样  
+
 	sz filename(下载)
 	
 ####法二:通过FlashFXP工具(或者其他工具)
@@ -98,19 +98,19 @@ description: 最近在学这个，算是总结吧。
 	#编辑环境变量配置文件 
 	vi /etc/profile
 
-在文件开头或末尾添加  
+在文件开头或末尾添加
+
 	JAVA_HOME=/usr/local/java/jdk(安装的版本号/文件夹名) 
 	CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar 
 	PATH=$PATH:$JAVA_HOME/bin 
 	
-保存退出，并执行命令： 
-	
+保存退出，并执行命令:
+
 	#执行 
 	source /etc/profile 
 
 ####检测  
-输入java -version查看是否配置正确,
-也可以写个"Hello World"进行测试
+输入java -version查看是否配置正确,也可以写个"Hello World"进行测试
 
 	#新建一个Test.java文件，在其中输入以下代码并保存： 
 	public class test { 
