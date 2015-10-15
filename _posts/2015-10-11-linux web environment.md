@@ -74,10 +74,10 @@ description: 最近在学这个，算是总结吧。
 ####法一:直接用yum安装lrzsz（推荐）
 
 	yum install lrzsz -y  
+	
 安装完成之后  
 使用rz(上传)  
 同样  
-
 	sz filename(下载)
 	
 ####法二:通过FlashFXP工具(或者其他工具)
