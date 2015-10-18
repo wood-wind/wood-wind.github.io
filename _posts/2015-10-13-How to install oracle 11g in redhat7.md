@@ -1,6 +1,6 @@
 ---
 layout: post
-title: linux 下安装 oracle 11g
+title: redhat7 下安装 oracle 11g
 date: 2015-10-13
 categories: blog
 tags: [技术]
@@ -9,7 +9,7 @@ description: 最近也在学这个，算是总结吧。
 
 2015年10月13日22:46:24
 
-##准备Oracle 12c的安装条件
+##准备Oracle 11c的安装条件
 - 去官方网站下载[http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html) 安装包，有2个包，大约2GB左右  
 包名称:  
 		inux_11gR2_database_1of2.zip  
@@ -27,13 +27,14 @@ description: 最近也在学这个，算是总结吧。
 ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-13-2.jpg)
 
 ##添加服务器名称(可选)
+	#vi /etc/hosts
 	eg: 192.168.199.99 	  zjw.localdomain   		  zjw
 	<IP-Address>	  <machine-name.domain-name> <machine-name> 
 	
 ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-13-3.jpg)
 
 ##内核参数调整（不低于以下值）
-
+	#貌似redhat7文件内容为空，我从网上搜的
 	vi /etc/sysctl.conf
 	
 	kernel.shmmni = 4096

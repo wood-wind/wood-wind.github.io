@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RedHat9下搭建Web应用环境(上)
+title: RedHat7下搭建Web应用环境
 date: 2015-10-11
 categories: blog
 tags: [技术]
@@ -9,12 +9,12 @@ description: 最近在学这个，算是总结吧。
 
 2015年10月11日22:57:16
 
-最近在学linux配置Java环境，将项目部署到linux下，并能够运行。
+最近在学redhat7配置Java环境，将项目部署到redhat7下，并能够运行。
 
 ##获取工具包
 - VMware(虚拟机)
 
-- redhat9
+- redhat7
 
 - [jdk-8u60-linux-i586.tar.gz[点此下载](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
@@ -24,15 +24,7 @@ description: 最近在学这个，算是总结吧。
 
 ##VMware的安装（略）
 
-##redhat9的安装
-
-如果系统包分了几部分可能会出现**换光盘**的情形。
-	![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-11-1.jpg)
-点击右下角的小光盘图标
-	![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-11-2.jpg)
-以及选择第二个文件
-	![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-11-3.jpg)
-完成之后如果直接点确定发现还是不行的，得再点击小光盘图标然后选**连接**才行
+##redhat7的安装（略）
 
 ##网络设置
 
@@ -67,7 +59,7 @@ description: 最近在学这个，算是总结吧。
 
 	service network restart
 	
-####最后Ping www.baidu.com 看是否能Ping通
+最后Ping www.baidu.com 看是否能Ping通
 	
 ##安装JDK
 
@@ -136,7 +128,7 @@ description: 最近在学这个，算是总结吧。
 提示服务开启
 
 ##在客户端访问tomcat首页
-**http://localhost:8080/**如果正常显示tomcat首页表明配置ok。
+**http://192.168.199.99:8080/**如果正常显示tomcat首页表明配置ok。
 ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-12-2.jpg)
 
 ##关闭防火墙
@@ -146,5 +138,34 @@ description: 最近在学这个，算是总结吧。
 
 ##部署一个web项目
 将文件为test.war的包上传到opt/tomcat/webapps目录下，然后重启tomcat  
-在客户端输入http://localhost:8080/ssh2，显示登录页面表明项目部署成功。
+在客户端输入http://192.168.199.99:8080/ssh2，显示登录页面表明项目部署成功。
+
+## 配置 mysql 
+因为 mysql 数据库在 Linux 上实在是太流行了，所以目前下载的主流 Linux 系统版本基本
+上都集成了 mysql 数据库在里面，我们可以通过如下命令来查看我们的操作系统上是否已经安装
+了 mysql 数据库. 
+
+检查是否已经安装 mysql 数据库
+
+	#查看是否安装mysql 
+	rpm -qa | grep mysql 
+	
+如果检测到 mysql 已经安装,则执行卸载操作
+
+	#普通删除模式 
+	rpm -e mysql 
+	#强力删除模式，如果使用上面命令删除时，提示有依赖的其它文件，则用该命令可以对其进行
+强力删除 
+	rpm -e --nodeps mysql 
+
+安装 mysql 数据库
+
+	#查看可下载的版本
+	yum list | grep mysql
+
+	#mysql安装命令 
+	yum install -y mysql-server  mysql  mysql-devel
+	
+	#查看mysql安装的版本 
+	rpm -qi mysql-server 
 
