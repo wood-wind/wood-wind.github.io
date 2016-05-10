@@ -1,28 +1,32 @@
 ---
 layout: post
-title: Arcgis自动建库
-date: 2016-05-04
+title: Arcgis自动建库(Java)
+date: 2016-05-06
 categories: blog
 tags: [技术]
-description: 自动建库
+description: java自动建库
 ---
 
-2016年05月04日22:26:11
+2016年05月06日22:26:11
 
-##问题
+###问题
+
 最近项目中需要建库，但是一个字段一个字段的选和填既费时还容易出错，弄了几个要素类之后实在受不了了，于是想办法怎么能够实现自动化，花了几天时间终于被我鼓捣出来了，在此记录一下。
 
 未实现自动化是这样的
+
 ![](http://7xnfbg.com1.z0.glb.clouddn.com/2016-05-04-1.JPG) 
 
 需要左边输字段名右边选字段类型，下面填别名和字段长度等，通常是对照excel表
 
-##实现思路
+###实现思路
+
 * 利用Java对excel进行操作，对模板化的excel表数据进行读取生成一个可执行的python文件
 * Arcgis自带python，并且工具箱中许多脚本就是用python写的
 * 执行生成的python文件
 
-##Java源代码
+###Java源代码
+
 ```java
 package topy;
 import java.io.BufferedReader;
@@ -154,7 +158,8 @@ public class xls {
 }
 ```
 
-##Java注意事项
+###Java注意事项
+
 * 需要下载能够读取excel的包
 * 将代码导出成可执行的jar包，这样只需要有Java环境的电脑都可以执行了
 * 因为读取时是模式化读取，需要固定excel格式
@@ -166,11 +171,15 @@ public class xls {
     * spatial_reference中放的是参考坐标系shp文件
     * database.mdb是新建的要素类存放的库
 * 当执行zdjk.jar会生成三个py文件
+
 ![](http://7xnfbg.com1.z0.glb.clouddn.com/2016-05-04-4.JPG)
 
-##生成的py文件
+###生成的py文件
+
 ![](http://7xnfbg.com1.z0.glb.clouddn.com/2016-05-04-5.JPG)
-##python注意事项
+
+###python注意事项
+
 * 配置python环境变量(自己Google)输入python回车出现下图表示配置成功
 ![](http://7xnfbg.com1.z0.glb.clouddn.com/2016-05-04-6.JPG)
 * 注意字符编码问题
@@ -178,5 +187,6 @@ public class xls {
 
 以上
 
-##后续
+###后续
+
 python不熟，用Java实现的，考虑用python一步实现
