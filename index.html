@@ -2,7 +2,11 @@
 layout: page
 description: "未经思考的人生是不值得过的"
 ---
-
+<script>
+var host = "wood-wind.github.io";
+if ((host == window.location.host) && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+</script>
 {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
