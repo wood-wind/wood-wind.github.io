@@ -3,8 +3,8 @@ title: 午
 header-img: "img/sence2.jpg"
 tagline: "cn"  
 description: ""  
-baseurl: ""
-url: "https://wood-wind.github.io"  
+baseurl: "/"
+url: "http://wood-wind.github.io"  
 
 # About/contact
 owner: 
