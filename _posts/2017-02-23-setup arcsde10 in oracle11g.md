@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Linux下安装Arcsde10
 date: 2017-02-25
@@ -13,13 +13,13 @@ description:
 
 另外，由于是涉密机器，安装过程记录只好用网上的了。
 
- ### 1.环境
+### 1.环境
  
-系统：Redhat6.4
-oracle: 11g
-Arcsge: 10
+系统：Redhat6.4  
+oracle: 11g  
+Arcsge: 10  
 
- ### 2.环境检查
+### 2.环境检查
  
 检查一下在Linux操作系统下Oracle数据库是否能启动，是否能连通等
 ```
@@ -38,7 +38,7 @@ Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - Production
 With the Partitioning, OLAP, Data Mining and Real Application Testing options  
 SQL>  
 ```
- ### 3.创建arcsde用户
+### 3.创建arcsde用户
  
 我没有创建Arcsde用户，直接用的oracle
 
@@ -52,13 +52,13 @@ BAD PASSWORD: it is based on a dictionary word
 Retype new UNIX password:  
 passwd: all authentication tokens updated successfully. 
 ```
- ### 4.上传安装文件
+### 4.上传安装文件
  
 利用FileZilla就行，上传解压后的文件夹，然后赋予读写权限
 
 `[root@oracledb ~]#chmod –R 777 /home/oracle/app/oracle11g_64`
 
- ### 5.创建SDE的用户、表空间、赋予权限
+### 5.创建SDE的用户、表空间、赋予权限
  
 其实创建这些东西不需要我们自己去做的，在oracle11g_64目录下面有一个02.tar的包，解压包有一个createsdeoracle .sql文件：
 
@@ -94,7 +94,7 @@ extent management local uniform size 512K;
 ```
 执行此sql
 
- ### 6.安装arcsde
+### 6.安装arcsde
 ```
 [root@oracledb ~]#cd /home/oracle11g_64
 [root@oracledb oracle11g_64]# ./install -load  
@@ -136,7 +136,7 @@ ArcSDE Product
 ```
 此处运行./install -road 后可能报错，基本是缺包的问题。我使用挂载本地yum源的方式安装依赖包
 
- ### 7.修改环境变量
+### 7.修改环境变量
 ```
 [oracle@oracledb ~]$ vim .bash_profile  
 # .bash_profile  
@@ -162,7 +162,7 @@ export PATH=$PATH:$HOME:$ORACLE_HOME/bin:$SDEHOME/bin:/usr/lib64
 
 `[oracle@oracledb ~]$ source .bash_profile`
 
- ### 8.修改配置文件
+### 8.修改配置文件
 ```
 [oracle@oracledb etc]$ vi services.sde  
 [oracle@oracledb etc]$ more services.sde  
@@ -191,7 +191,7 @@ drwxr-xr-x 2 oracle oinstall 4096 02-22 13:34 lib
 drwxr-xr-x 4 oracle oinstall 4096 2010-01-09 locale  
 drwxr-xr-x 3 oracle oinstall 4096 02-22 13:34 tools
 ```
- ### 9.创建SDE的Schema
+### 9.创建SDE的Schema
 ```
 [oracle@oracledb ~]$ sdesetup -o install -d oracle11g -p sde  
   
@@ -218,7 +218,7 @@ Successfully created GDB schema.
 Successfully installed ArcSDE components.  
 Refer SDEHOME\etc\sde_setup.log for more details. 
 ```
- ### 10.更新License
+### 10.更新License
 ```
 [oracle@oracledb ~]$ sdesetup -o update_key -d oracle11g -l /home/arcsde.ecp -u sde -p sde -N 
   
@@ -226,7 +226,7 @@ ESRI ArcSDE Server Setup Utility Wed Feb 22 14:41:41 2012
 ----------------------------------------------------------------  
 Successfully updated authorization key.  
 ```
- ### 11.启动ArcSDE服务
+### 11.启动ArcSDE服务
 ```
 [oracle@oracledb ~]$ sdemon -o start  
 Please enter ArcSDE DBA password:
