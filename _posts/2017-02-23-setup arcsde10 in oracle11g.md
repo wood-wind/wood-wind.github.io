@@ -14,11 +14,13 @@ description:
 另外，由于是涉密机器，安装过程记录只好用网上的了。
 
  ### 1.环境
+ 
 系统：Redhat6.4
 oracle: 11g
 Arcsge: 10
 
  ### 2.环境检查
+ 
 检查一下在Linux操作系统下Oracle数据库是否能启动，是否能连通等
 ```
 [oracle@oracledb ~]$ sqlplus / as sysdba  
@@ -37,7 +39,9 @@ With the Partitioning, OLAP, Data Mining and Real Application Testing options
 SQL>  
 ```
  ### 3.创建arcsde用户
+ 
 我没有创建Arcsde用户，直接用的oracle
+
 创建arcsde用户的命令
 ```
 [root@oracledb ~]# useradd -d /home/arcsde -G oinstall -m arcsde  
@@ -49,11 +53,15 @@ Retype new UNIX password:
 passwd: all authentication tokens updated successfully. 
 ```
  ### 4.上传安装文件
+ 
 利用FileZilla就行，上传解压后的文件夹，然后赋予读写权限
+
 `[root@oracledb ~]#chmod –R 777 /home/oracle/app/oracle11g_64`
 
  ### 5.创建SDE的用户、表空间、赋予权限
+ 
 其实创建这些东西不需要我们自己去做的，在oracle11g_64目录下面有一个02.tar的包，解压包有一个createsdeoracle .sql文件：
+
 ```
 [oracle @oracledb ~]$ ll /home/oracle11g_64/
 total 153916
@@ -85,6 +93,7 @@ datafile '/LOCATION/sde.dbf' size 400M
 extent management local uniform size 512K;
 ```
 执行此sql
+
  ### 6.安装arcsde
 ```
 [root@oracledb ~]#cd /home/oracle11g_64
@@ -150,7 +159,9 @@ export LD_LIBRARY_PATH=$SDEHOME/lib:/usr/lib:/lib:$ORACLE_HOME/lib
 export PATH=$PATH:$HOME:$ORACLE_HOME/bin:$SDEHOME/bin:/usr/lib64 
 ```
 使之生效
+
 `[oracle@oracledb ~]$ source .bash_profile`
+
  ### 8.修改配置文件
 ```
 [oracle@oracledb etc]$ vi services.sde  
@@ -163,7 +174,9 @@ export PATH=$PATH:$HOME:$ORACLE_HOME/bin:$SDEHOME/bin:/usr/lib64
 esri_sde               5151/tcp  
 ```
 在Root用户下/etc/services文件一样添加服务
+
 `[root@oracledb ~]# vi /etc/services `
+
 将sdeexe100设为属于oinstall组
 ```
 [root@oracledb ~]# chown -R oracle:oinstall /home/oracle/app/sdeexe100  
