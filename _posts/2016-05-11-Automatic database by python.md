@@ -14,17 +14,17 @@ description: Python自动建库
 
 以下为实现过程
 
-##python实现思路
+### python实现思路
 
 * 利用python对excel进行操作，对模板化的excel表数据进行读取然后直接对arcgis进行操作
 * 直接写进利用SDE连接oracle的arcgis
 * 同时对写进oracle的表字段写进注释
 
-##python源代码
+### python源代码
 
 **head.py主文件**
 
-```python  
+```python
 # -*- coding: UTF-8 -*-
 import arcpy
 import xlrd,sys,os
@@ -138,7 +138,7 @@ def excel_table_byindex(by_index,sheet,cursor):
 dataconnect='LD/123456@192.168.199.108/db1'
 sdeworkspace='C:\\Users\\Administrator\\AppData\\Roaming\\Esri\\Desktop10.2\\ArcCatalog\\MySDE.sde'
 ```
-##python注意事项
+### python注意事项
 
 * 需要配置python环境变量
 * 需要安装xlrd或其它读取excel的插件
@@ -150,12 +150,10 @@ sdeworkspace='C:\\Users\\Administrator\\AppData\\Roaming\\Esri\\Desktop10.2\\Arc
 
 ![file](http://7xnfbg.com1.z0.glb.clouddn.com/2016-05-11-1.JPG)
 
-##结果展示
+### 结果展示
 
 其中yc是参考坐标系要素
 
 ![1](http://7xnfbg.com1.z0.glb.clouddn.com/2016-05-11-2.JPG)
 ![2](http://7xnfbg.com1.z0.glb.clouddn.com/2016-05-11-3.JPG)
 
-自动写入oracle的注释如下
-![]()

@@ -11,10 +11,12 @@ description: 最近在学这个，算是总结吧。
 
 在安装oracle的过程中遇到了非常非常多的问题，我将遇到的问题以标题列出，并给出我的解决方法以及方法出处。
 
-##关于网络配置
+### 关于网络配置
+
 [网络配置问题，将IP地址设为静态  以及手动分区](http://www.osyunwei.com/archives/7702.html)
 
-##关于yum的问题
+### 关于yum的问题
+
 [连接网络后使用yum install -y lrzsz报no package lrzsz available错误](http://www.cnblogs.com/kofxxf/p/3658610.html)
 
 解决方案：
@@ -43,7 +45,8 @@ description: 最近在学这个，算是总结吧。
 
 使用rz命令弹出SecureCRT上传窗口
 
-##yum命令总提示"没有可用软件包"
+### yum命令总提示"没有可用软件包"
+
 尝试用挂载iso镜像然后利用iso作为yum源安装软件
 
 上传ios错误。。。睡觉

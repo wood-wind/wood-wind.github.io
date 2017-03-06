@@ -9,7 +9,8 @@ description: 最近也在学这个，算是总结吧。
 
 2015年10月13日22:46:24
 
-##准备Oracle 11c的安装条件
+### 准备Oracle 11c的安装条件
+
 - 去官方网站下载[http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html) 安装包，有2个包，大约2GB左右  
 包名称:  
 		inux_11gR2_database_1of2.zip  
@@ -26,29 +27,30 @@ description: 最近也在学这个，算是总结吧。
 - 得到database文件夹
 ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-13-2.jpg)
 
-##添加服务器名称(可选)
+### 添加服务器名称(可选)
 	#vi /etc/hosts
 	eg: 192.168.199.99 	  zjw.localdomain   		  zjw
 	<IP-Address>	  <machine-name.domain-name> <machine-name> 
 	
 ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-13-3.jpg)
 
-##内核参数调整（不低于以下值）
-	#貌似redhat7文件内容为空，我从网上搜的
-	vi /etc/sysctl.conf
-	
-	kernel.shmmni = 4096
-	kernel.sem = 250 32000 100 128
-	net.ipv4.ip_local_port_range = 9000 65500
-	net.core.rmem_default = 262144
-	net.core.rmem_max = 4194304
-	net.core.wmem_default = 262144
-	net.core.wmem_max = 1048576
+### 内核参数调整（不低于以下值）
+```
+#貌似redhat7文件内容为空，我从网上搜的
+vi /etc/sysctl.conf
 
-	#加载参数
-	sysctl -p
-	
-##调整会话限制
+kernel.shmmni = 4096
+kernel.sem = 250 32000 100 128
+net.ipv4.ip_local_port_range = 9000 65500
+net.core.rmem_default = 262144
+net.core.rmem_max = 4194304
+net.core.wmem_default = 262144
+net.core.wmem_max = 1048576
+
+#加载参数
+sysctl -p
+```	
+### 调整会话限制
 
 	vi /etc/security/limits.conf
 	
@@ -59,16 +61,16 @@ description: 最近也在学这个，算是总结吧。
 	oracle        soft    nofile   32768
 	oracle        hard    nofile   65536
 	
-##安装需要的软件环境
+### 安装需要的软件环境
 
 	yum -y install binutils compat-libstdc++ compat-libstdc++-33elfutils-libelf-devel gcc gcc-c++ glibc-devel glibc-headers ksh libaio-devellibstdc++-devel make sysstat unixODBC-devel binutils-* compat-libstdc++*elfutils-libelf* glibc* gcc-* libaio* libgcc* libstdc++* make* sysstat*unixODBC* wget unzip
 	yum clean all
 	
 	rpm -qa|grep binutils(检查binutils安装的版本，未安装为空)
 	
-##用户环境要求
+### 用户环境要求
 
-####创建相关用户、组账号
+##### 创建相关用户、组账号
 
 	#安装组
 	groupadd oinstall
@@ -81,18 +83,18 @@ description: 最近也在学这个，算是总结吧。
 	#设置密码
 	passwd oracle
 	
-####设置SELinux为disabled
+##### 设置SELinux为disabled
 
 	vi /etc/selinux/config  
 ![](http://7xnfbg.com1.z0.glb.clouddn.com/2015-10-13-4.jpg)
 
-##安装目录准备
+### 安装目录准备
 	#创建基本目录
 	mkdir -p /oracle/product/11.2.0/db_1
 	chown -R oracle:oinstall oracle/
 	chmod -R 775 oracle/
 	
-##用户设置环境信息
+### 用户设置环境信息
 
 	#切换oracle账户
 	在oracle用户目录.bash_profile末尾添加
