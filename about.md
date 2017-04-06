@@ -7,7 +7,7 @@ header-img: "img/sence4.jpg"
 
 
 <center>
-   <p><img src="http://img3.douban.com/view/photo/photo/public/p2271675670.jpg" align="center"></p>
+   <p><img src="https://lh3.google.com/u/0/d/0B8KZYo2iZmoGc3FlN2F3ZDhFUmc=w1366-h638-iv1" align="center"></p>
 </center>
 
 我是午，每天千字践行者，正在践行中......
