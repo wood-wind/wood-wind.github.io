@@ -1,0 +1,125 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "name": "甘肃省规划院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.87229919433594,
+          36.05133692334109
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "name": "甘肃省林业厅"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.83427619934082,
+          36.059125930741565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "name": "城关区林业局"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.82901906967163,
+          36.036988560487465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "name": "七里河区林业局"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.78945112228394,
+          36.06828440080378
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "name": "西固区林业局"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.62570762634277,
+          36.089268539953636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "name": "榆中县林业局"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.11060810089111,
+          35.85086558743404
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "name": "红古区林业局"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.86271572113037,
+          36.345964387942225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "name": "皋兰县林业局"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.93890380859375,
+          36.32950909247666
+        ]
+      }
+    }
+  ]
+}
