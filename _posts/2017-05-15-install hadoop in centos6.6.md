@@ -10,6 +10,7 @@ description:
 2017年5月15日 20:28:53
 
 这周机房四台服务器要我格了装CentOS，做大数据分析，本文记录以Hadoop YARN和Spark为基础来构建大数据平台的过程。
+
 实验机器为google cloud的3台实例
 ### 环境
 * CentOS 6.6
@@ -39,19 +40,25 @@ description:
 修改主机在
 `/etc/sysconfig/network`
 文件中，HOSTNAME = [主机名]
+
 修改主机名需要重启
 
 ### 2.配置Hadoop  
-这里将hadoop安装在/home/app/hadoop目录，下面的操作非特殊说明都是在instance-1上进行操作，操作用户为silen的普通用户。
- 1. 下载hadoop 2.7.3
+这里将hadoop安装在`/home/app/hadoop`目录，下面的操作非特殊说明都是在instance-1上进行操作，操作用户为silen的普通用户。
+ **1.下载hadoop 2.7.3**
+ 
 `wget http://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz`
+
 或者通过Filezilla上传
 
 **解压并进入到hadoop目录**
 
-```tar -zxvf hadoop-2.7.3.tar.gz
+```
+tar -zxvf hadoop-2.7.3.tar.gz
 mv hadoop-2.7.3 /usr/hadoop
-cd /usr/hadoop```
+cd /usr/hadoop
+```
+
 将以下环境变量添加到自己的~/.bash_profile或者/etc/profile中
 
 ```
@@ -68,8 +75,10 @@ PATH变量中最好不要添加sbin目录，因为会与spark的sbin目录下的
 
 scp复制到其他机器：
 
-```scp ~/.bash_profile instance-2:~
-scp ~/.bash_profile instance-2:~```
+```
+scp ~/.bash_profile instance-2:~
+scp ~/.bash_profile instance-2:~
+```
 
 **所有修改的设置都可以通过在instance-1下配置好后复制到其他节点**
 
@@ -81,7 +90,8 @@ scp ~/.bash_profile instance-2:~```
 
 `hadoop version`
 
- 2. 验证Hadoop单机配置
+ **2.验证Hadoop单机配置**
+ 
 修改`/home/app/hadoop`目录下的`etc/hadoop/hadoop-env.sh`文件，修改Java路径：
 
 `export JAVA_HOME=/home/app/java`
@@ -97,18 +107,22 @@ cat output/*
 
 `dfsadmin`
 
- 3. 开始配置集群环境
+ **3.开始配置集群环境**
 
 修改Hadoop配置文件
+
 下面的操作都是在hadoop目录之中的`etc/hadoop`路径下，即`/home/app/hadoop/etc/hadoop`，该文件夹存放了hadoop所需要的几乎所有配置文件。
-需要修改的配置文件主要有：hadoop-env.sh, core-site.xml, hdfs-site.xml, mapred-site.xml, yarn-env.sh, yarn-site.xml, slaves
+需要修改的配置文件主要有：  
+hadoop-env.sh, core-site.xml, hdfs-site.xml, mapred-site.xml, yarn-env.sh, yarn-site.xml, slaves
 
  * **hadoop-env.sh**
+ 
 除了上面需要在其中添加JAVA_HOME之外，还需要增加HADOOP_PREFIX变量：
 
 `export HADOOP_PREFIX=/home/app/hadoop`
 
  * **core-site.xml**
+ 
 ```
 <configuration>
   <property>
@@ -123,9 +137,11 @@ cat output/*
   </property>
 </configuration>
 ```
+
 这里指定instance-1为namenode及相应端口号，并设置本地的临时文件夹为hadoop安装目录下的tmp，该目录需要手动创建
 
  * **hdfs-site.xml**
+ 
 ```
 <configuration>
   <property>
@@ -145,9 +161,11 @@ cat output/*
   </property>
 </configuration>
 ```
+
 指定namenode和datanode数据的存储位置（需要手动创建），以及副本个数
 
  * **mapred-site.xml**
+ 
 ```
 <configuration>
   <property>
@@ -164,14 +182,18 @@ cat output/*
   </property>
 </configuration>
 ```
+
 * **yarn-env.sh**
+
 ```
 # export JAVA_HOME=/home/y/libexec/jdk1.6.0/
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 ```
+
 修改JAVA_HOME
 
  * **yarn-site.xml**
+ 
 ```
 <configuration>
 <!-- Site specific YARN configuration properties -->
@@ -201,25 +223,34 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
   </property>
 </configuration>
 ```
+
 指定resourcemanager为instance-1，并修改相应端口，这些端口如果不修改都有默认值，可以根据自己的网络情况进行修改
 
  * **slaves**
+ 
 ```
 instance-1
 instance-2
 instance-3
 ```
+
 instance-1即是namenode，同时也是datanode
+
 创建刚才配置中用到的文件夹：
 
 `mkdir -p /home/app/hadoop/hdfs/data /home/app/hadoop/hdfs/name /usr/hadoop/tmp`
+
 配置完成之后将该配置复制到instance-2和instance-3上：
+
 ```
 scp -r /usr/hadoop slave1:/usr/
 scp -r /usr/hadoop slave2:/usr/
 ```
+
 ### 3.启动Hadoop集群
- 1. 启动hdfs
+
+ **1.启动hdfs**
+ 
 记得其他2个slave上的环境变量都已经生效
 在instance-1上格式化namenode：
 
@@ -230,34 +261,45 @@ scp -r /usr/hadoop slave2:/usr/
 `start-dfs.sh`
 
 启动完成之后在master上启动jps命令查看其java进程：
+
 ```
 3226 NameNode
 5334 Jps
 3508 SecondaryNameNode
 3352 DataNode
 ```
+
 查看instance-2和instance-3上进程：
+
 instance-2：
+
 ```
 1959 DataNode
 2720 Jps
 ```
+
 instance-3:
+
 ```
 2704 Jps
 1963 DataNode
 ```
+
 找一个能够访问instance-1的浏览器通过50070端口可以查看namenode和datanode情况
+
 `http://[instance-1_IP]:50070`
+
 如果看到Summary中的Live Nodes显示为3，并且Configured Capacity中显示的DFS总大小刚好为三台机器的可用空间大小，则表示已经配置没有问题
 
 ### 4.启动yarn
+
 执行以下命令启动yarn：
 
 `start-yarn.sh`
 
 使用jps查看master及2个slave：
 instance-1：
+
 ```
 3667 ResourceManager
 3226 NameNode
@@ -266,29 +308,38 @@ instance-1：
 3352 DataNode
 3767 NodeManager
 ```
+
 instance-2：
+
 ```
 1959 DataNode
 2062 NodeManager
 2720 Jps
 ```
+
 instance-3：
+
 ```
 2704 Jps
 1963 DataNode
 2065 NodeManager
 ```
+
 根据我们的配置，通过instance-1的端口8099端口可以在web端查看集群的内存、CPU、及任务调度情况
 
 `http://192.168.1.187:8099/cluster`
 
 如果显示的Memory Total、Active Nodes等内容与你的实际相符，则表示yarn启动成功
 通过各节点的8042端口可以查看各节点的资源情况，如查看slave1的节点信息：
+
 `http://192.168.1.188:8042`
 
 也可以通过以下命令查看hdfs的全局信息：
+
 `[silen@instance-1 spark]$ hdfs dfsadmin -report`
+
 输出：
+
 ```
 Configured Capacity: 62987169792 (58.66 GB)
 Present Capacity: 51942948864 (48.38 GB)
@@ -356,9 +407,13 @@ Cache Remaining%: 0.00%
 Xceivers: 1
 Last contact: Mon May 15 08:06:52 UTC 2017
 ```
+
 ### 5. 启动Job History
+
 `mr-jobhistory-daemon.sh start historyserver`
+
 instance-1上的jps进程：
+
 ```
 3667 ResourceManager
 3508 SecondaryNameNode
@@ -368,6 +423,7 @@ instance-1上的jps进程：
 5448 Jps
 3226 NameNode
 ```
+
 查看web页面：http://[instance-1_IP]:19888
 
 至此整个Hadoop集群已经启动成功
